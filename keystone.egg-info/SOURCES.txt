@@ -90,7 +90,6 @@ keystone/common/config.py
 keystone/common/exception.py
 keystone/common/template.py
 keystone/common/wsgi.py
-keystone/content/admin/.DS_Store
 keystone/content/admin/extensions.json
 keystone/content/admin/extensions.xml
 keystone/content/admin/identity-admin-OS.wadl
@@ -206,7 +205,6 @@ keystone/content/common/style/shjs/sh_print.css
 keystone/content/common/style/shjs/sh_style.css
 keystone/content/common/style/shjs/sh_whitengrey.css
 keystone/content/common/xslt/schema.xslt
-keystone/content/service/.DS_Store
 keystone/content/service/extensions.json
 keystone/content/service/extensions.xml
 keystone/content/service/identity-RAX-KEY.wadl
@@ -232,6 +230,8 @@ keystone/content/service/xsd/atom/atom.xsd
 keystone/content/service/xsd/atom/xml.xsd
 keystone/contrib/__init__.py
 keystone/contrib/extensions/__init__.py
+keystone/contrib/extensions/raxgrp/__init__.py
+keystone/contrib/extensions/raxgrp/api.py
 keystone/contrib/extensions/raxkey/__init__.py
 keystone/contrib/extensions/raxkey/extension.json
 keystone/contrib/extensions/raxkey/extension.xml
