@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]
+then
+	if ! getent passwd keystone > /dev/null 2>&1
+	then
+        adduser --system --home /var/lib/keystone --no-create-home --shell /bin/bash keystone
+	fi
+	chown keystone -R /var/lib/keystone /var/log/keystone
+fi
+
+#DEBHELPER#

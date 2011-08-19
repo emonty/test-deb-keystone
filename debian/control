@@ -1,0 +1,79 @@
+Source: keystone
+Section: net
+Priority: extra
+Maintainer: Monty Taylor <mordred@inaugust.com>
+Uploaders: Soren Hansen <soren@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50),
+ python-all,
+ python-eventlet (>= 0.9.15),
+ python-httplib2,
+ python-ldap,
+ python-lxml,
+ python-memcache,
+ python-nova,
+ python-paste,
+ python-routes,
+ python-sqlalchemy,
+ python-swift,
+ python-unittest2,
+ python-webob,
+ python-webtest,
+Standards-Version: 3.9.1
+XS-Python-Version: >= 2.6
+Homepage: http://launchpad.net/keystone
+
+Package: python-keystone
+Architecture: all
+Section: python
+Depends: ${python:Depends}, ${misc:Depends},
+ python-sqlalchemy,
+ python-routes,
+ python-lxml,
+Provides: ${python:Provides}
+XB-Python-Version: ${python:Versions}
+Description: Proposed OpenStack identity service - Python library
+ Keystone is a proposed independent authentication service for OpenStack.
+ .
+ This initial proof of concept aims to address the current use cases in Swift
+ and Nova which are:
+ .
+  * REST-based, token auth for Swift
+  * many-to-many relationship between identity and tenant for Nova. Keystone
+    does authentication and stuff
+ .
+ This package contains the Python libraries.
+
+Package: keystone
+Architecture: all
+Section: python
+Depends: ${python:Depends}, ${misc:Depends},
+ python-keystone (= ${source:Version}),
+ adduser
+Description: Proposed OpenStack identity service - Daemons
+ Keystone is a proposed independent authentication service for OpenStack.
+ .
+ This initial proof of concept aims to address the current use cases in Swift
+ and Nova which are:
+ .
+  * REST-based, token auth for Swift
+  * many-to-many relationship between identity and tenant for Nova. Keystone
+    does authentication and stuff
+ .
+ This package contains the daemons.
+
+Package: keystone-doc
+Architecture: all
+Section: doc
+Depends: libjs-jquery
+Description: Proposed OpenStack identity service - Documentation
+ Keystone is a proposed independent authentication service for OpenStack.
+ .
+ This initial proof of concept aims to address the current use cases in Swift
+ and Nova which are:
+ .
+  * REST-based, token auth for Swift
+  * many-to-many relationship between identity and tenant for Nova. Keystone
+    does authentication and stuff
+ .
+ This package contains the documentation.
+
